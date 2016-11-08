@@ -7,6 +7,8 @@
 import { fromJS } from 'immutable';
 import {
   LOAD_QUESTIONS,
+  LOAD_QUESTIONS_SUCCESS,
+  LOAD_QUESTIONS_ERROR,
 } from './constants';
 
 const initialState = fromJS({
@@ -16,9 +18,16 @@ const initialState = fromJS({
 function questionsReducer(state = initialState, action) {
   switch (action.type) {
     case LOAD_QUESTIONS:
-      console.log("action");
+      console.log("loading questions");
+      return state;
+    case LOAD_QUESTIONS_SUCCESS:
+      console.log("sucess");
+      console.log(action.questions);
       return state
-        .set('questionsList', ["b","c"]);
+        .set('questionsList', action.questions);
+    case LOAD_QUESTIONS_ERROR:
+      console.log(action.err);
+      return state;
     default:
       return state;
   }
