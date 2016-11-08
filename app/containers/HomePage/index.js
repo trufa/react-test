@@ -14,7 +14,6 @@ import AtPrefix from './AtPrefix';
 import CenteredSection from './CenteredSection';
 import Form from './Form';
 import H2 from 'components/H2';
-import Questions from 'containers/Questions';
 import Input from './Input';
 import List from 'components/List';
 import ListItem from 'components/ListItem';
@@ -64,7 +63,37 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             { name: 'description', content: 'A React.js Boilerplate application homepage' },
           ]}
         />
-        <Questions questionList={this.props.questionList} />
+        <div>
+          <CenteredSection>
+            <H2>
+              <FormattedMessage {...messages.startProjectHeader} />
+            </H2>
+            <p>
+              <FormattedMessage {...messages.startProjectMessage} />
+            </p>
+          </CenteredSection>
+          <Section>
+            <H2>
+              <FormattedMessage {...messages.trymeHeader} />
+            </H2>
+            <Form onSubmit={this.props.onSubmitForm}>
+              <label htmlFor="username">
+                <FormattedMessage {...messages.trymeMessage} />
+                <AtPrefix>
+                  <FormattedMessage {...messages.trymeAtPrefix} />
+                </AtPrefix>
+                <Input
+                  id="username"
+                  type="text"
+                  placeholder="mxstbr"
+                  value={this.props.username}
+                  onChange={this.props.onChangeUsername}
+                />
+              </label>
+            </Form>
+            {mainContent}
+          </Section>
+        </div>
       </article>
     );
   }
