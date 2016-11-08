@@ -21,12 +21,10 @@ function questionsReducer(state = initialState, action) {
       console.log("loading questions");
       return state;
     case LOAD_QUESTIONS_SUCCESS:
-      console.log("sucess");
-      console.log(action.questions);
       return state
         .set('questionsList', action.questions);
     case LOAD_QUESTIONS_ERROR:
-      console.log(action.err);
+      console.log("ERROR: ", action.err);
       return state;
     default:
       return state;

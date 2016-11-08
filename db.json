@@ -1,3 +1,7 @@
 {
-  "questions": ["preguta1"]
+  "questions": [{
+    "text": "hola"
+  }, {
+    "text": "chau"
+  }]
 }

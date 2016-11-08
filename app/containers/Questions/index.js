@@ -12,10 +12,10 @@ import { FormattedMessage } from 'react-intl';
 import Helmet from 'react-helmet';
 import messages from './messages';
 import { loadQuestions } from './actions';
+import QuestionList from 'components/QuestionList';
 
 export class Questions extends React.Component { // eslint-disable-line react/prefer-stateless-function
   componentDidMount() {
-    console.log("comp did mount");
     this.props.loadQuestions();
   }
   render() {
@@ -27,7 +27,7 @@ export class Questions extends React.Component { // eslint-disable-line react/pr
             { name: 'description', content: 'A React.js Boilerplate application homepage' },
           ]}
         />
-        {this.props.questionList}
+        <QuestionList questionList={this.props.questionList} />
       </article>
     );
   }

@@ -31,7 +31,6 @@ export function* getRepos() {
  * By using `takeLatest` only the result of the latest API call is applied.
  */
 export function* getQuestionsWatcher() {
-  console.log("here");
   yield fork(takeLatest, LOAD_QUESTIONS, getRepos);
 }
 
