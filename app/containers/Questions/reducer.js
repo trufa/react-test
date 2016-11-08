@@ -10,7 +10,7 @@ import {
 } from './constants';
 
 const initialState = fromJS({
-  questionsList: ["d", "e"]
+  questionsList: []
 });
 
 function questionsReducer(state = initialState, action) {
