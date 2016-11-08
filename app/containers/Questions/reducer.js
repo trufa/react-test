@@ -6,7 +6,7 @@
 
 import { fromJS } from 'immutable';
 import {
-  DEFAULT_ACTION,
+  LOAD_QUESTIONS,
 } from './constants';
 
 const initialState = fromJS({
@@ -14,10 +14,8 @@ const initialState = fromJS({
 });
 
 function questionsReducer(state = initialState, action) {
-  console.log("quest reducer");
-  console.log(action.type);
   switch (action.type) {
-    case DEFAULT_ACTION:
+    case LOAD_QUESTIONS:
       console.log("action");
       return state
         .set('questionsList', ["b","c"]);

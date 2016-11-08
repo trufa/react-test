@@ -5,12 +5,11 @@
  */
 
 import {
-  DEFAULT_ACTION,
+  LOAD_QUESTIONS,
 } from './constants';
 
-export function defaultAction() {
-  console.log("def actions");
+export function loadQuestions() {
   return {
-    type: DEFAULT_ACTION,
+    type: LOAD_QUESTIONS,
   };
 }

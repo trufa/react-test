@@ -11,7 +11,7 @@ import selectQuestions from './selectors';
 import { FormattedMessage } from 'react-intl';
 import Helmet from 'react-helmet';
 import messages from './messages';
-import { defaultAction } from './actions';
+import { loadQuestions } from './actions';
 
 export class Questions extends React.Component { // eslint-disable-line react/prefer-stateless-function
   componentDidMount() {
@@ -40,7 +40,7 @@ const mapStateToProps = createStructuredSelector({
 function mapDispatchToProps(dispatch) {
   return {
     loadQuestions: (evt) => {
-      dispatch(defaultAction());
+      dispatch(loadQuestions());
     },
   };
 }

@@ -4,4 +4,4 @@
  *
  */
 
-export const DEFAULT_ACTION = 'app/Questions/DEFAULT_ACTION';
+export const LOAD_QUESTIONS = 'app/Questions/LOAD_QUESTIONS';
