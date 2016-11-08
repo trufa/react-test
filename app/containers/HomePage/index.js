@@ -14,7 +14,7 @@ import AtPrefix from './AtPrefix';
 import CenteredSection from './CenteredSection';
 import Form from './Form';
 import H2 from 'components/H2';
-import Question from 'components/Question';
+import Questions from 'containers/Questions';
 import Input from './Input';
 import List from 'components/List';
 import ListItem from 'components/ListItem';
@@ -64,7 +64,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             { name: 'description', content: 'A React.js Boilerplate application homepage' },
           ]}
         />
-        <Question text="Hola como va"/>
+        <Questions questionList={this.props.questionList} />
       </article>
     );
   }
