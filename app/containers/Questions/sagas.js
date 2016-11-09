@@ -14,7 +14,7 @@ import { selectUsername } from 'containers/HomePage/selectors';
 /**
  * Github repos request/response handler
  */
-export function* getRepos() {
+export function* getQuestionsList() {
 
   try {
     // Call our request helper (see 'utils/request')
@@ -31,7 +31,7 @@ export function* getRepos() {
  * By using `takeLatest` only the result of the latest API call is applied.
  */
 export function* getQuestionsWatcher() {
-  yield fork(takeLatest, LOAD_QUESTIONS, getRepos);
+  yield fork(takeLatest, LOAD_QUESTIONS, getQuestionsList);
 }
 
 /**
