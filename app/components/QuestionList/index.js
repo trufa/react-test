@@ -13,9 +13,9 @@ import messages from './messages';
 
 function QuestionList(props) {
 
-  let list = props.questionList.map((item, index) => {
-    return <Question text={item.text} key={index}/>;
-  });
+  let list = props.questionList.map((item, index) => (
+    <Question text={item.text} key={index}/>
+  ));
   return (
     <div>
       {list}
