@@ -15,6 +15,7 @@ import { loadQuestions } from './actions';
 import QuestionList from 'components/QuestionList';
 
 export class Questions extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  //TODO: can  use will mount?
   componentDidMount() {
     this.props.loadQuestions();
   }
